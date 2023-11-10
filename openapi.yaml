@@ -3,7 +3,7 @@ info:
   title: "MLQ Tutor API"
   version: "1.0.0"
 servers:
-  - url: "https://your-repl-url.username.repl.co"  # Update this
+  - url: "https://chat-gpt-tutor.replit.app"
 paths:
   /start_track:
     post:

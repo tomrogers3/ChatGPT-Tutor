@@ -65,9 +65,9 @@ def serve_openapi_yaml():
 def serve_logo():
   return send_from_directory('.', 'logo.png', mimetype='image/png')
 
-@app.route('/legal-info')
-def serve_legal_info():
-  return send_from_directory('.', 'legal-info', mimetype='text/yaml')
+@app.route('/legal')
+def serve_legal():
+  return send_from_directory('.', 'legal', mimetype='text/yaml')
 
 
 if __name__ == '__main__':

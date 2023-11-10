@@ -1,19 +1,18 @@
 {
-    "schema_version": "v1",
-    "name_for_human": "MLQ Tutor",
-    "name_for_model": "mlqTutor",
-    "description_for_human": "Plugin for teaching AI/ML concepts to students, including working with LLMs and prompt engineering.",
-    "description_for_model": "Plugin for teaching AI/ML concepts, including working with language models and prompt engineering. The plugin offers a Prompt Engineering educational track with a sequence of predefined educational steps. The plugin provides detailed explanations, code examples, and feedback for each step. Students can interact with the plugin to ask questions, respond to prompts, and advance through the track. The plugin aims to provide feedback to the user's responses before continuing to the next step for an interactive and educational experience for students.",
-    "auth": {
-      "type": "none"
-    },
-    "api": {
-      "type": "openapi",
-      "url": "https://your-project.username.repl.co/openapi.yaml",
-      "is_user_authenticated": false
-    },
-    "logo_url": "https://your-project.username.co/logo.png",
-    "contact_email": "support@example.com",
-    "legal_info_url": "http://www.example.com/legal"
-  }
-  
+  "schema_version": "v1",
+  "name_for_human": "MLQ Tutor",
+  "name_for_model": "mlqTutor",
+  "description_for_human": "Plugin for teaching AI/ML concepts to students, including working with LLMs and prompt engineering.",
+  "description_for_model": "Plugin for teaching AI/ML concepts, including working with language models and prompt engineering. The plugin offers a Prompt Engineering educational track with a sequence of predefined educational steps. The plugin provides detailed explanations, code examples, and feedback for each step. Students can interact with the plugin to ask questions, respond to prompts, and advance through the track. The plugin aims to provide feedback to the user's responses before continuing to the next step for an interactive and educational experience for students.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://chat-gpt-tutor.replit.app/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://chat-gpt-tutor.replit.app/logo.png",
+  "contact_email": "hello@tomlrogers.com",
+  "legal_info_url": "http://chat-gpt-tutor.replit.app/legal"
+}
