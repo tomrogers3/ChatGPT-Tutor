@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_model": "tutor",
+    "name_for_human": "Autism AI Tutor Plugin",
+    "description_for_model": "Plugin for teaching social and life skills, tailored for individuals with autism.",
+    "description_for_human": "Plugin for tutoring social and life skills, tailored for individuals with autism.",
+    "auth": {
+      "type": "user_http",
+      "authorization_type": "bearer"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://aitutor.viewtiful.co/openapi.yaml",
+      "has_user_authentication": false
+    },
+    "logo_url": "https://aitutor.viewtiful.co/logo.png",
+    "contact_email": "hello@tomlrogers.com", 
+    "legal_info_url": "http://aitutor.viewtiful.co/legal-info"
+  }

@@ -1,0 +1,88 @@
+openapi: "3.0.2"
+info:
+  title: "MLQ Tutor API"
+  version: "1.0.0"
+servers:
+  - url: "https://your-repl-url.username.repl.co"  # Update this
+paths:
+  /start_track:
+    post:
+      operationId: startTrack
+      summary: "Start an educational track"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                track:
+                  type: string
+                  description: "The name of the track to start."
+                  enum: ['prompt_engineering']  # Specify available track names
+      responses:
+        "200":
+          description: "The first prompt of the selected track and the current step index."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  prompt:
+                    type: string
+                  step_index:
+                    type: integer
+        "400":
+          description: "An error occurred (e.g., track not found)."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /next_step:
+    post:
+      operationId: nextStep
+      summary: "Move to the next step in the track and receive feedback"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                track:
+                  type: string
+                  description: "The name of the track."
+                  enum: ['prompt_engineering']  # Specify available track names
+                step_index:
+                  type: integer
+                  description: "The index of the current step."
+                user_response:
+                  type: string
+                  description: "The user's response to the current step's prompt."
+      responses:
+        "200":
+          description: "Feedback for the current step, the next prompt (if available), and the updated step index."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  feedback:
+                    type: string
+                  next_prompt:
+                    type: string
+                    nullable: true
+                  step_index:
+                    type: integer
+        "400":
+          description: "An error occurred (e.g., track not found, no more steps in the track)."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
